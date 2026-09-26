@@ -1,0 +1,592 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07111c">
+    <title>Aircraft Interactive Learning | SAEL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header class="home-header">
+    <div class="home-brand">
+        <a class="logo" href="#home" aria-label="SAEL Aerospace Lab home">
+            <span class="logo-mark">SAEL</span>
+            <span class="logo-name">AEROSPACE LAB</span>
+        </a>
+        <span class="header-credit">Made &amp; designed by Sara El Maghfor</span>
+    </div>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#aircraft" onclick="enterAircraftLab(event)">Aircraft Lab</a>
+    <a href="#quiz">Quiz</a>
+</nav>
+</header>
+
+    <main>
+
+        <section id="home" class="hero">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <p class="hero-kicker">SAEL / AIRCRAFT SYSTEMS LAB</p>
+                    <h1>EXPLORE THE <span>AIRCRAFT</span></h1>
+                    <p class="hero-description">
+                        An interactive guide to the systems and technology behind modern aircraft.
+                    </p>
+                    <div class="hero-actions">
+                        <button onclick="startLab()" class="hero-button">START EXPLORING</button>
+                        <span class="hero-index">FLIGHT SYSTEMS / 01</span>
+                    </div>
+                </div>
+
+                <div class="home-hero-visual" aria-hidden="true">
+                    <div class="hero-visual-label">
+                        <span>SAEL-X01</span>
+                        <span>CONCEPT AIRCRAFT / PLAN VIEW</span>
+                    </div>
+                    <div class="aircraft-visual home-aircraft-visual">
+                        <div class="aircraft">
+                            <div class="main-wings">
+                                <div class="wing wing-left"></div>
+                                <div class="wing wing-right"></div>
+                            </div>
+                            <div class="aircraft-tail">
+                                <div class="horizontal-tail left-tail"></div>
+                                <div class="horizontal-tail right-tail"></div>
+                                <div class="tail-fin"></div>
+                            </div>
+                            <div class="engine engine-left aircraft-engine"><div class="fan"></div></div>
+                            <div class="engine engine-right aircraft-engine"><div class="fan"></div></div>
+                            <div class="fuselage">
+                                <div class="cockpit"></div>
+                                <div class="windows">
+                                    <span></span><span></span>
+                                    <span></span><span></span>
+                                    <span></span><span></span>
+                                    <span></span><span></span>
+                                    <span></span><span></span>
+                                    <span></span><span></span>
+                                </div>
+                            </div>
+                            <div class="landing-gear front-wheel"><span class="wheel"></span></div>
+                            <div class="landing-gear left-wheel"><span class="wheel"></span></div>
+                            <div class="landing-gear right-wheel"><span class="wheel"></span></div>
+                        </div>
+                    </div>
+                    <div class="hero-visual-coordinates">36° 43′ N &nbsp; 4° 25′ W <span>FLIGHT SYSTEMS / 01</span></div>
+                </div>
+            </div>
+</section>
+
+        <section class="project-intro" aria-labelledby="project-title">
+            <div class="home-section-heading">
+                <p class="home-eyebrow">THE LEARNING EXPERIENCE</p>
+                <h2 id="project-title">ABOUT THE PROJECT</h2>
+            </div>
+            <p class="project-description">
+                This interactive experience introduces the main systems of an aircraft through an accessible visual learning interface.
+            </p>
+        </section>
+
+        <section class="home-features" aria-label="Learning features">
+            <article class="feature-card">
+                <span class="feature-index">01 / INTERACTION</span>
+                <h3>INTERACTIVE</h3>
+                <p>Explore aircraft components through interactive hotspots.</p>
+            </article>
+            <article class="feature-card">
+                <span class="feature-index">02 / SYSTEMS</span>
+                <h3>EDUCATIONAL</h3>
+                <p>Learn the purpose and function of major aircraft systems.</p>
+            </article>
+            <article class="feature-card">
+                <span class="feature-index">03 / MODEL</span>
+                <h3>VISUAL</h3>
+                <p>Understand complex aerospace concepts through a visual aircraft model.</p>
+            </article>
+        </section>
+
+        <section class="creator-section" aria-labelledby="creator-title" data-reveal>
+            <div class="creator-panel">
+                <div class="creator-identity">
+                    <p class="home-eyebrow">MOROCCO · AEROSPACE</p>
+                    <h2 id="creator-title">ABOUT THE CREATOR</h2>
+                    <p class="creator-name">SARA ELMAGHFOR</p>
+                    <span class="creator-role">YOUNG MOROCCAN AEROSPACE ENTHUSIAST</span>
+                </div>
+                <div class="creator-description">
+                    <p>A young Moroccan aerospace enthusiast and the creator of SAEL Aerospace.</p>
+                    <p>This project was created to make aircraft systems easier to understand, explore, and remember — especially for young people who are curious about aviation and aerospace.</p>
+                    <p>Through interactive visuals, simple explanations, and hands-on exploration, SAEL Aerospace turns complex aircraft concepts into something more accessible, engaging, and noticeable.</p>
+                    <p class="creator-signoff">Built from curiosity. Designed for future aerospace enthusiasts.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-cta" aria-labelledby="home-cta-title">
+            <div>
+                <p class="home-eyebrow">AIRCRAFT SYSTEMS / SAEL-X01</p>
+                <h2 id="home-cta-title">READY TO EXPLORE?</h2>
+                <p>Discover how the aircraft works, one system at a time.</p>
+            </div>
+            <button onclick="startLab()" class="home-cta-button">EXPLORE THE AIRCRAFT <span aria-hidden="true">&#8594;</span></button>
+        </section>
+
+
+
+        <section id="aircraft" class="aircraft-section">
+            <div class="lab-header">
+
+    <div>
+        <p class="tag">SAEL / FLIGHT LAB 01</p>
+        <h2>Aircraft Systems</h2>
+    </div>
+
+    <div class="lab-status">
+        <span class="status-dot"></span>
+        SYSTEM ONLINE
+    </div>
+
+</div>
+<div class="flight-mode-control" role="group" aria-label="Flight lighting mode">
+    <span class="flight-mode-label">FLIGHT MODE</span>
+    <button type="button" class="flight-mode-button is-active" id="dayModeButton" aria-pressed="true" onclick="setFlightMode('day')">
+        <span aria-hidden="true">&#9728;</span> DAY
+    </button>
+    <button type="button" class="flight-mode-button" id="nightModeButton" aria-pressed="false" onclick="setFlightMode('night')">
+        <span aria-hidden="true">&#9790;</span> NIGHT
+    </button>
+</div>
+            <div class="learning-progress">
+
+    <div class="progress-header">
+        <span>SAEL SYSTEMS LAB</span>
+        <span id="progressText">0 / 5 SYSTEMS EXPLORED</span>
+    </div>
+
+    <div class="progress-track">
+        <div id="progressBar" class="progress-bar"></div>
+    </div>
+
+</div>
+
+
+            <div class="section-title">
+                <p class="tag">AIRCRAFT LAB / 01</p>
+                <h2>Explore the Aircraft</h2>
+                <p>Choose a component to begin learning.</p>
+            </div>
+<div class="aircraft-data">
+
+    <div>
+        <span>TYPE</span>
+        <strong>JET AIRCRAFT</strong>
+    </div>
+
+    <div>
+        <span>MODE</span>
+        <strong>ANALYSIS</strong>
+    </div>
+
+    <div>
+        <span>SYSTEMS</span>
+        <strong>05</strong>
+    </div>
+
+    <div>
+        <span>LAB ID</span>
+        <strong>SAEL-001</strong>
+    </div>
+
+</div>
+            <div class="aircraft-status">
+
+    <span>
+        <i></i>
+        SYSTEM ONLINE
+    </span>
+
+    <span>
+        AIRCRAFT: SAEL-X01
+    </span>
+
+    <span>
+        MODE: LEARNING
+    </span>
+
+</div>
+    <div class="walkaround-hud" id="walkaroundHud" aria-live="polite" hidden>
+    <div class="walkaround-hud-status">
+        <span id="walkaroundCounter">WALKAROUND 01 / 07</span>
+        <span id="walkaroundCount">SYSTEMS INSPECTED: 0 / 7</span>
+    </div>
+    <div class="walkaround-guidance" id="walkaroundGuidance">
+        <span>INSPECT:</span>
+        <strong id="walkaroundTarget">NOSE / COCKPIT</strong>
+    </div>
+    <div class="walkaround-confirmation" id="walkaroundConfirmation" hidden>
+        <strong id="walkaroundConfirmationTitle"></strong>
+        <p id="walkaroundDescription"></p>
+        <button type="button" id="walkaroundNextButton" onclick="advanceWalkaround()"></button>
+    </div>
+    <div class="walkaround-complete" id="walkaroundComplete" hidden>
+        <strong>PRE-FLIGHT WALKAROUND COMPLETE</strong>
+        <span>7 / 7 SYSTEMS INSPECTED</span>
+        <span class="walkaround-ready">AIRCRAFT READY</span>
+        <button type="button" onclick="enterAircraftSystems()">ENTER AIRCRAFT LAB</button>
+    </div>
+    <button type="button" class="walkaround-exit" id="walkaroundExit" onclick="exitWalkaround()">EXIT WALKAROUND</button>
+</div>
+            <div class="aircraft-container">
+<div class="airplane">
+
+    <div class="aircraft-visual" id="aircraftVisual" role="group" aria-label="SAEL-X01 aircraft and interactive system hotspots">
+        <div class="takeoff-environment" aria-hidden="true">
+            <div class="takeoff-runway"></div>
+            <div class="takeoff-clouds"></div>
+        </div>
+
+        <div class="aircraft">
+            <div class="main-wings" id="aircraft-wing" aria-hidden="true">
+                <div class="wing wing-left"><span class="navigation-light navigation-light-red"></span></div>
+                <div class="wing wing-right"><span class="navigation-light navigation-light-green"></span></div>
+            </div>
+
+            <div class="aircraft-tail" id="aircraft-tail" aria-hidden="true">
+                <div class="horizontal-tail left-tail"></div>
+                <div class="horizontal-tail right-tail"></div>
+                <div class="tail-fin"><span class="navigation-light navigation-light-white"></span></div>
+            </div>
+
+            <div class="engine engine-left aircraft-engine" aria-hidden="true">
+                <div class="fan"></div>
+            </div>
+            <div class="engine engine-right aircraft-engine" aria-hidden="true">
+                <div class="fan"></div>
+            </div>
+
+            <div class="fuselage">
+                <div class="cockpit" id="aircraft-cockpit"></div>
+                <div class="windows" aria-hidden="true">
+                    <span></span><span></span>
+                    <span></span><span></span>
+                    <span></span><span></span>
+                    <span></span><span></span>
+                    <span></span><span></span>
+                    <span></span><span></span>
+                </div>
+                <div class="door door-front" aria-hidden="true"></div>
+                <div class="door door-rear" aria-hidden="true"></div>
+            </div>
+
+            <div class="landing-gear front-wheel" aria-hidden="true"><span class="wheel"></span></div>
+            <div class="landing-gear left-wheel" aria-hidden="true"><span class="wheel"></span></div>
+            <div class="landing-gear right-wheel" aria-hidden="true"><span class="wheel"></span></div>
+
+            <button class="hotspot hotspot-cockpit" data-part="cockpit" onclick="openSystem(2, this)" aria-label="Explore the cockpit">
+                <span>03</span><span class="hotspot-label">COCKPIT</span>
+            </button>
+            <button class="hotspot hotspot-wing" data-part="wing" onclick="openSystem(0, this)" aria-label="Explore the wings">
+                <span>01</span><span class="hotspot-label">WING</span>
+            </button>
+            <button class="hotspot hotspot-engine" data-part="engine" onclick="openSystem(1, this)" aria-label="Explore the engines">
+                <span>02</span><span class="hotspot-label">ENGINE</span>
+            </button>
+            <button class="hotspot hotspot-tail" data-part="tail" onclick="openSystem(3, this)" aria-label="Explore the tail">
+                <span>04</span><span class="hotspot-label">TAIL</span>
+            </button>
+            <button class="hotspot hotspot-landing" data-part="landing" onclick="openSystem(4, this)" aria-label="Explore the landing gear">
+                <span>05</span><span class="hotspot-label">LANDING GEAR</span>
+            </button>
+        </div>
+
+        <div class="takeoff-overlay" id="takeoffOverlay" aria-live="polite" aria-atomic="true" hidden>
+            <div class="takeoff-readout">
+                <span class="takeoff-readout-label">FLIGHT SEQUENCE</span>
+                <strong id="takeoffMessage">FLIGHT SEQUENCE INITIALIZING...</strong>
+                <span id="takeoffCruiseMode" hidden>CRUISE MODE</span>
+            </div>
+            <button class="takeoff-skip-button" onclick="finishTakeoffSimulation()">SKIP</button>
+        </div>
+
+        <button class="aircraft-details-button" onclick="showAircraftInfo()">
+            AIRCRAFT INFORMATION <span aria-hidden="true">&#8594;</span>
+        </button>
+    </div>
+</div>
+
+<div class="aircraft-command-row">
+    <button id="takeoffButton" class="takeoff-button" onclick="startTakeoffSimulation()">
+        SIMULATE TAKEOFF <span aria-hidden="true">&#9654;</span>
+    </button>
+</div>
+
+<div class="info-panel" id="infoPanel">
+<div class="lesson-header">
+
+    <div>
+        <p class="tag">AIRCRAFT SYSTEM / MODULE</p>
+
+        <h3 id="partTitle">
+            Select a Component
+        </h3>
+    </div>
+
+    <div class="system-number" id="systemNumber">
+        01
+    </div>
+
+</div>
+
+    <p id="partDescription">
+        Select one of the highlighted components
+        to begin exploring how an aircraft works.
+    </p>
+
+    <div class="system-line"></div>
+
+    <p class="hint" id="systemHint">
+        INTERACTIVE COMPONENT • CLICK TO EXPLORE
+    </p>
+
+    <div class="system-navigation" id="systemNavigation">
+
+        <button id="prevSystem" onclick="previousSystem()">
+            ← PREVIOUS
+        </button>
+
+        <span id="systemCounter">
+            SYSTEM 01 / 05
+        </span>
+
+        <button id="nextSystem" onclick="nextSystem()">
+            NEXT →
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+<section class="systems-overview">
+
+    <div class="section-title">
+        <p class="tag">AIRCRAFT SYSTEMS / 01</p>
+        <h2>Explore The Aircraft</h2>
+
+        <p>
+            Select a system to begin your investigation.
+        </p>
+    </div>
+
+    <div class="systems-grid">
+
+        <button class="system-card" onclick="openSystem(0)">
+            <span>01</span>
+            <strong>WING</strong>
+            <small>
+                Lift, control surfaces & aerodynamics
+            </small>
+        </button>
+
+        <button class="system-card" onclick="openSystem(1)">
+            <span>02</span>
+            <strong>ENGINE</strong>
+            <small>
+                Propulsion, airflow & thrust
+            </small>
+        </button>
+
+        <button class="system-card" onclick="openSystem(2)">
+            <span>03</span>
+            <strong>COCKPIT</strong>
+            <small>
+                Instruments, controls & avionics
+            </small>
+        </button>
+
+        <button class="system-card" onclick="openSystem(3)">
+            <span>04</span>
+            <strong>TAIL</strong>
+            <small>
+                Stability, pitch & yaw
+            </small>
+        </button>
+
+        <button class="system-card" onclick="openSystem(4)">
+            <span>05</span>
+            <strong>LANDING GEAR</strong>
+            <small>
+                Ground support, braking & loads
+            </small>
+        </button>
+
+    </div>
+
+</section>
+
+<section id="quiz" class="quiz-section">
+
+    <section id="quiz" class="quiz-section">
+
+    <div class="section-title">
+        <p class="tag">KNOWLEDGE CHECK / 02</p>
+        <h2>Test Your Aircraft Knowledge</h2>
+        <p>
+            Test what you learned from the SAEL Aerospace Lab modules.
+        </p>
+    </div>
+
+    <div class="quiz-card">
+
+        <div class="quiz-progress">
+            <span id="quizQuestionNumber">QUESTION 01 / 22</span>
+        </div>
+
+        <h3 id="quizQuestion">
+            What is the primary purpose of an aircraft engine?
+        </h3>
+
+        <div class="quiz-options">
+
+            <button onclick="selectAnswer(0)">
+                To generate lift
+            </button>
+
+            <button onclick="selectAnswer(1)">
+                To produce thrust
+            </button>
+
+            <button onclick="selectAnswer(2)">
+                To control the landing gear
+            </button>
+
+            <button onclick="selectAnswer(3)">
+                To control the aircraft's pitch
+            </button>
+
+        </div>
+
+        <p id="quizFeedback"></p>
+
+        <button
+            id="quizNext"
+            class="quiz-next"
+            onclick="nextQuizQuestion()"
+            disabled>
+            NEXT QUESTION →
+        </button>
+
+    </div>
+
+</section>
+
+</section>
+
+</main>
+<section id="mission" class="mission-section">
+
+    <div class="section-title">
+
+        <p class="tag">FLIGHT MISSION / 03</p>
+
+        <h2>Aircraft Systems Mission</h2>
+
+        <p>
+            Apply what you learned. Identify the system
+            responsible for each flight situation.
+        </p>
+
+    </div>
+
+    <div class="mission-card">
+
+        <div class="mission-status">
+            <span id="missionNumber">MISSION 01 / 03</span>
+        </div>
+
+        <h3 id="missionQuestion">
+            During takeoff, which system produces the force
+            that moves the aircraft forward?
+        </h3>
+
+        <div class="mission-options">
+
+            <button onclick="answerMission(0)">
+                Wing
+            </button>
+
+            <button onclick="answerMission(1)">
+                Engine
+            </button>
+
+            <button onclick="answerMission(2)">
+                Tail
+            </button>
+
+            <button onclick="answerMission(3)">
+                Landing Gear
+            </button>
+
+        </div>
+
+        <p id="missionFeedback"></p>
+
+        <button
+            id="missionNext"
+            class="mission-next"
+            onclick="nextMission()"
+            disabled>
+            CONTINUE MISSION →
+        </button>
+
+    </div>
+
+</section>
+<footer>
+    <p class="footer-project">Aircraft Interactive Learning</p>
+    <p class="footer-credit">Created by Sara Elmaghfor · 2026</p>
+</footer>
+
+<section id="walkaroundIntro" class="walkaround-intro" role="dialog" aria-modal="true" aria-labelledby="walkaroundIntroTitle" hidden>
+    <div class="walkaround-intro-panel">
+        <p class="walkaround-intro-kicker">SAEL / FLIGHT LAB 01</p>
+        <h2 id="walkaroundIntroTitle">PRE-FLIGHT WALKAROUND</h2>
+        <p>Inspect the aircraft before departure.</p>
+        <div class="walkaround-intro-total"><strong>07</strong><span>SYSTEMS TO INSPECT</span></div>
+        <div class="walkaround-intro-actions">
+            <button type="button" id="walkaroundIntroStart" onclick="beginWalkaround()">START WALKAROUND <span aria-hidden="true">&#8594;</span></button>
+            <button type="button" class="walkaround-intro-skip" onclick="skipWalkaroundIntro()">SKIP TO AIRCRAFT LAB</button>
+        </div>
+    </div>
+</section>
+
+<section id="studyPage" class="study-page" role="dialog" aria-modal="true" aria-labelledby="studyPageTitle" hidden>
+    <div class="study-page-shell">
+        <header class="study-page-header">
+            <div>
+                <p class="study-page-kicker">SAEL / AIRCRAFT SYSTEMS</p>
+                <h1 id="studyPageTitle">STUDY MODULE</h1>
+            </div>
+            <button class="study-page-back" onclick="closeStudyPage()">
+                <span aria-hidden="true">&#8592;</span> BACK TO AIRCRAFT
+            </button>
+        </header>
+        <div id="studyPageContent" class="study-page-content"></div>
+        <footer class="study-page-footer">
+            <span>SAEL / INTERACTIVE LEARNING</span>
+            <span id="studyPageProgress">SYSTEM 01 / 05</span>
+        </footer>
+    </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
